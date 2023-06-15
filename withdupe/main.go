@@ -49,7 +49,6 @@ func main() {
 	log.Printf("Config: \n%s", data)
 
 	name := "source-1.com/openshift-release-dev/ocp-v4.0-art-dev@sha256:7270ceb168750f0c4ae0afb0086b6dc111dd0da5a96ef32638e8c414b288d228"
-	// name := "source-1.com/openshift-release-dev/ocp-v4.0-art-dev:tag"
 
 	// get an appropriate registry
 	reg, err := FindRegistryWithConfig(config, name)
