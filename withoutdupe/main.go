@@ -30,7 +30,7 @@ func main() {
 		{
 			Spec: apioperatorsv1alpha1.ImageContentSourcePolicySpec{
 				RepositoryDigestMirrors: []apioperatorsv1alpha1.RepositoryDigestMirrors{
-					{Source: "source-1.com", Mirrors: []string{"mirror-1.com", "mirror-2.com"}},
+					{Source: "source-1.com", Mirrors: []string{"mirror-1.com", "mirror-2.com/hello"}},
 					{Source: "source-2.com", Mirrors: []string{"mirror-3.com", "mirror-4.com"}},
 				},
 			},
@@ -43,6 +43,8 @@ func main() {
 	// populate the config
 	err := registries.EditRegistriesConfig(config, nil, nil, icspRules, nil, nil)
 	check(err)
+
+	// perform post processing / cleanup on the config
 	err = config.PostProcessRegistries()
 	check(err)
 	log.Printf("Config: \n%s", asJson(config))
@@ -60,6 +62,10 @@ func main() {
 	srcs, err := reg.PullSourcesFromReference(ref)
 	check(err)
 	log.Printf("Pull Sources: \n%s", asJson(srcs))
+
+	for i, src := range srcs {
+		log.Printf("[%v] %v", i, src.Reference.String())
+	}
 
 	log.Print("end")
 }

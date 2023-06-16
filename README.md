@@ -8,8 +8,8 @@ The `withoutdupe` version used [a fork]() of `containers/image` with the necessa
 ```sh
 $ go run .
 
-2023/06/15 11:33:20 start
-2023/06/15 11:33:20 Config: 
+2023/06/16 15:44:01 start
+2023/06/16 15:44:01 Config: 
 {
   "Registries": [
     {
@@ -24,7 +24,7 @@ $ go run .
           "PullFromMirror": "digest-only"
         },
         {
-          "Location": "mirror-2.com",
+          "Location": "mirror-2.com/hello",
           "Insecure": false,
           "PullFromMirror": "digest-only"
         }
@@ -58,7 +58,7 @@ $ go run .
   "ShortNameMode": "",
   "Aliases": null
 }
-2023/06/15 11:33:20 Matched Registry: 
+2023/06/16 15:44:01 Matched Registry: 
 {
   "Prefix": "source-1.com",
   "Location": "source-1.com",
@@ -71,7 +71,7 @@ $ go run .
       "PullFromMirror": "digest-only"
     },
     {
-      "Location": "mirror-2.com",
+      "Location": "mirror-2.com/hello",
       "Insecure": false,
       "PullFromMirror": "digest-only"
     }
@@ -79,7 +79,7 @@ $ go run .
   "Blocked": false,
   "MirrorByDigestOnly": false
 }
-2023/06/15 11:33:20 Pull Sources: 
+2023/06/16 15:44:01 Pull Sources: 
 [
   {
     "Endpoint": {
@@ -91,7 +91,7 @@ $ go run .
   },
   {
     "Endpoint": {
-      "Location": "mirror-2.com",
+      "Location": "mirror-2.com/hello",
       "Insecure": false,
       "PullFromMirror": "digest-only"
     },
@@ -106,5 +106,8 @@ $ go run .
     "Reference": {}
   }
 ]
-2023/06/15 11:33:20 end
+2023/06/16 15:44:01 [0] mirror-1.com/openshift-release-dev/ocp-v4.0-art-dev@sha256:7270ceb168750f0c4ae0afb0086b6dc111dd0da5a96ef32638e8c414b288d228
+2023/06/16 15:44:01 [1] mirror-2.com/hello/openshift-release-dev/ocp-v4.0-art-dev@sha256:7270ceb168750f0c4ae0afb0086b6dc111dd0da5a96ef32638e8c414b288d228
+2023/06/16 15:44:01 [2] source-1.com/openshift-release-dev/ocp-v4.0-art-dev@sha256:7270ceb168750f0c4ae0afb0086b6dc111dd0da5a96ef32638e8c414b288d228
+2023/06/16 15:44:01 end
 ```
