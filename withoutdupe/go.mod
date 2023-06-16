@@ -2,6 +2,8 @@ module github.com/dcaravel/reg-mirror-poc/withoutdupe
 
 go 1.20
 
+replace github.com/containers/image/v5 => github.com/dcaravel/containers-image/v5 v5.0.0-20230615224121-814720beff09
+
 require (
 	github.com/containers/image/v5 v5.22.0
 	github.com/openshift/api v0.0.0-20220901185337-0b39f81154fa
@@ -38,7 +40,3 @@ require (
 	sigs.k8s.io/json v0.0.0-20220713155537-f223a00ba0e2 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3 // indirect
 )
-
-// github.com/containers/image/v5 => github.com/dcaravel/containers-image v0.0.0-20230615224121-814720beff09
-// github.com/containers/image/v5 => github.com/dcaravel/containers-image/v5 v5.0.0-20230615224121-814720beff09
-replace github.com/containers/image/v5 => ../../containers-image

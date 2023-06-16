@@ -5,6 +5,8 @@ github.com/containers/storage v1.46.1/go.mod h1:81vNDX4h+nXJ2o0D6Yqy6JGXDYJGVpHZ
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/dcaravel/containers-image/v5 v5.0.0-20230615224121-814720beff09 h1:wmWDUDa3Tq+BetWVMGJ+2pVZDRQB2ZeH6YyMeOCuo08=
+github.com/dcaravel/containers-image/v5 v5.0.0-20230615224121-814720beff09/go.mod h1:kgrUmhXkeezeHnwMqe+c1/MqzTlOeN5zSsm0xBPqWLI=
 github.com/docker/go-units v0.5.0 h1:69rxXcBk27SvSaaxTtLh/8llcHD8vYHT7WSdRZ/jvr4=
 github.com/docker/go-units v0.5.0/go.mod h1:fgPhTUdO+D/Jk86RDLlptpiXQzgHJF7gydDDbaIK4Dk=
 github.com/go-logr/logr v0.1.0/go.mod h1:ixOQHD9gLJUVQQ2ZOR7zLEifBX6tGkNJF4QyIY7sIas=
