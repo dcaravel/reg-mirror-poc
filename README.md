@@ -1,5 +1,7 @@
 A PoC using `containers/image` and `openshift/runtime-utils` to obtain a prioritized list of mirrors applicable to a given source image
 
+The `withfile` version uses the `containers/image` library as is, with no API changes or code copied
+
 The `withdupe` version required copying and modifying a few private functions from [here](https://github.com/containers/image/blob/04ba35d04e92eb4eba55563c8ccc404d3ffe7c19/pkg/sysregistriesv2/system_registries_v2.go) in order to operate purely in memory.
 
 The `withoutdupe` version used [a fork]() of `containers/image` with the necessary API methods exposed
